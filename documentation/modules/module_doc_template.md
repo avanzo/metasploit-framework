@@ -1,13 +1,14 @@
-The following is the recommended format for module documentation.
-But feel free to add more content/sections to this.
-One of the general ideas behind these documents is to help someone troubleshoot the module if it were to stop
-functioning in 5+ years, so giving links or specific examples can be VERY helpful.
-
 ## Vulnerable Application
 
-  Instructions to get the vulnerable application.  If applicable, include links to the vulnerable install files,
-  as well as instructions on installing/configuring the environment if it is different than a standard install.
-  Much of this will come from the PR, and can be copy/pasted.
+ This module exploits a feature of Splunk whereby a custom application can be
+ uploaded through the web based interface. Through the \'script\' search command a
+ user can call commands defined in their custom application which includes arbitrary
+ perl or python code. To abuse this behavior, a valid Splunk user with the admin
+ role is required. By default, this module uses the credential of "admin:changeme",
+ the default Administrator credential for Splunk. Note that the Splunk web interface
+ runs as SYSTEM on Windows, or as root on Linux by default. This module has been
+ tested successfully against Splunk 5.0, 6.1, 6.1.1 and 7.2.4.
+ Version 7.2.4 has been tested successfully against OSX as well
 
 ## Verification Steps
 
